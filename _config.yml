@@ -32,17 +32,17 @@ url: 'https://sunnamed434.github.io'
 github:
   username: sunnamed434             # change to your github username
 
-twitter:
-  username: twitter_username            # change to your twitter username
+#twitter:
+#  username: twitter_username            # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: sunnamed434
-  email: example@domain.com             # change to your email address
+  email: sunnamed434@proton.me             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
+    #- https://twitter.com/username      # change to your twitter homepage
     - https://github.com/sunnamed434       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -97,7 +97,7 @@ comments:
     issue_term:   # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo:              # <gh-username>/<repo>
+    repo:      sunnamed434/blog-comments        # <gh-username>/<repo>
     repo_id:
     category:
     category_id:
