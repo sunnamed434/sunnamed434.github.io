@@ -18,7 +18,7 @@ Today's goal is to crash dnSpy while analyzing types, for example, somehow someo
 
 As an example I'll use AsmResolver and custom injection of byte[] array from [BitMono](https://github.com/sunnamed434/BitMono) in the app, which will crash the dnSpy, you could do the same with dnlib, nothing really changes between the code, but with AsmResolver try to write the Module with `Advanced PE Image Building` to bypass possible errors while writing the module.
 Let's start with what, you need to use this method:
-```cs
+```csharp
 public FieldDefinition InjectInvisibleArray(ModuleDefinition module, TypeDefinition type, byte[] data, string name)
 {
     var valueType = module.DefaultImporter.ImportType(typeof(ValueType));
