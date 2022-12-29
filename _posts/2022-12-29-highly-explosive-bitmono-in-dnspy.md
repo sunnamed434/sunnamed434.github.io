@@ -2,7 +2,7 @@
 layout: post
 title: Highly explosive BitMono in dnSpy
 date: '2022-12-29 17:06:59 +0200'
-categories: bitmono, mono-magic, dnspy, bugs, asmresolver
+categories: bitmono mono-magic dnspy bugs asmresolver
 ---
 
 First of all, leave a star on [BitMono](https://github.com/sunnamed434/BitMono), because [BitMono](https://github.com/sunnamed434/BitMono) says a happy new year and does open-source magic and describes how to even do the same and don't open the source code, lol, or I'll come for you, isn't that real magic?
