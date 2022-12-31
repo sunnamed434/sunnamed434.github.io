@@ -5,14 +5,7 @@ date: '2022-12-29 17:06:59 +0200'
 categories: bitmono mono-magic dnspy bugs asmresolver
 ---
 
-~~UPDATE 12/30/2022:
-How are you down there? ElektroKill made a super-mega-fast hot-fix of this bug and some other yesterday right after hours of post, in dnSpy v6.3.0-rc1, seem like he said in the release notes that calli were fixed, sadly, but not yet :D. So, time is gone, however old versions are still fine! ;)
-So, this is outdated at some point, depending on what dnSpy version is being used.~~
-
-UPDATE 12/30/2022:
-After a 30 minutes I understand that I was wrong with reproducing the bug, so this is still working, but bug was sold for a star..!
-
-First of all, leave a star on [BitMono](https://github.com/sunnamed434/BitMono), because [BitMono](https://github.com/sunnamed434/BitMono) says a happy new year and does open-source magic and describes how to even do the same and don't open the source code, lol, or I'll come for you, isn't that real magic?
+First of all, leave a star on [BitMono](https://github.com/sunnamed434/BitMono), because [BitMono](https://github.com/sunnamed434/BitMono) says a happy new year and does open-source magic and describes how to even do the same and don't even open the source code, lol, or I'll come for you, isn't that real magic?
 Today, I'll show you how to [BitMono](https://github.com/sunnamed434/BitMono) crashes dnSpy/dnSpyEx 6.20 - all of these precious things, also there's one more known bug and related to RVA.
 
 * These bugs are compatible only with Mono but good to know them as additional complex knowledge
