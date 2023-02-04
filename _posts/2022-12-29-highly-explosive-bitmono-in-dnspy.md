@@ -21,7 +21,7 @@ You could say, there are plenty of ways how to crash it, I agree with you, but I
 
 I asked ElektroKill to leave a star on [BitMono](https://github.com/sunnamed434/BitMono) to reveal the secret of the Dark Magic to him, I just wanted to agree on a good, but he rejected me, here's what you did, ElektroKill, you brought me on it. Probably after this post this will be fixed in new versions of dnSpyEx, but, anyway this will take plenty of time to do this, because dnSpy is a very huge app, to fix something you need to fix everything :D, so, use it while this is alive, btw this is always useful in old versions of dnSpy.
 
-## Our today's goal
+## Today's goal
 Today's goal is to crash dnSpy while analyzing types, for example, create new NestedType and important to DO NOT specify the Public attributes, etc, somehow someone decided to decompile your precious app (this could be your ad: use [BitMono](https://github.com/sunnamed434/BitMono) to prevent such things), so continuing, and habitually trying to analyze where your magic was used, here we will catch the hare.
 
 As an example I'll use AsmResolver and implementation from actual [BitMono](https://github.com/sunnamed434/BitMono), which will crash the dnSpy, you could do the same with dnlib, nothing really changes between the code, but with AsmResolver try to write the Module with `Advanced PE Image Building` to bypass possible errors while writing the module (I'm sure, everything is ok, you can write by default).
