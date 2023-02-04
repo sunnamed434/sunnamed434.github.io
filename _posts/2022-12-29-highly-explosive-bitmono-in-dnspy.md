@@ -9,12 +9,12 @@ categories: bitmono mono-magic dnspy bugs asmresolver
 * This bug was fixed in dnSpyEx 6.3.0 after 1 week after the post, see [commit](https://github.com/dnSpyEx/dnSpy/commit/d58b75265fbd0a767668b5e485219d0faba01dcd).
 * Source code with bug fix of dnSpyEx 6.3.0, see [here](https://github.com/dnSpyEx/dnSpy/blob/d58b75265fbd0a767668b5e485219d0faba01dcd/Extensions/dnSpy.Analyzer/TreeNodes/ScopedWhereUsedAnalyzer.cs#L187), fixes were marked with comments.
 
-First of all, leave a star on [BitMono](https://github.com/sunnamed434/BitMono) or I'll come for you, because [BitMono](https://github.com/sunnamed434/BitMono) says a happy new year and does open-source magic and even describes how to do the same and don't even open the source code, lol, isn't that real magic?
-Today, I'll show you how to [BitMono](https://github.com/sunnamed434/BitMono) crashes dnSpy/dnSpyEx 6.20 - all of these precious things.
+Today, I'll show you how to [BitMono](https://github.com/sunnamed434/BitMono) crashes dnSpy/dnSpyEx 6.20
 
 ## Compability
 * These bugs are compatible only with Mono.
 * Works until dnSpyEx 6.3.0
+* You can still use the bug because old versions still used!
 
 ## Summary
 You could say, there are plenty of ways how to crash it, I agree with you, but I'll show you one more way, I don’t know, fortunately, or unfortunately, most likely fortunately or maybe not, and maybe yes.
@@ -24,7 +24,7 @@ I asked ElektroKill to leave a star on [BitMono](https://github.com/sunnamed434/
 ## Our today's goal
 Today's goal is to crash dnSpy while analyzing types, for example, create new NestedType and important to DO NOT specify the Public attributes, etc, somehow someone decided to decompile your precious app (this could be your ad: use [BitMono](https://github.com/sunnamed434/BitMono) to prevent such things), so continuing, and habitually trying to analyze where your magic was used, here we will catch the hare.
 
-As an example I'll use AsmResolver and implementation from actual [BitMono](https://github.com/sunnamed434/BitMono), which will crash the dnSpy, you could do the same with dnlib, nothing really changes between the code, but with AsmResolver try to write the Module with `Advanced PE Image Building` to bypass possible errors while writing the module (I'm sure, everything is ok, you can write as by default).
+As an example I'll use AsmResolver and implementation from actual [BitMono](https://github.com/sunnamed434/BitMono), which will crash the dnSpy, you could do the same with dnlib, nothing really changes between the code, but with AsmResolver try to write the Module with `Advanced PE Image Building` to bypass possible errors while writing the module (I'm sure, everything is ok, you can write by default).
 ## Create your own NestedType in Module
 ```csharp
 var moduleType = module.GetOrCreateModuleType();
