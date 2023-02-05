@@ -45,5 +45,5 @@ Yep, this is crashed... well done!
 ![dnSpy Anti Decompiler fix](/assets/images/billions-of-nops-well-for-anti-decompiler/nops-antidecompiler-fix-dark.png){: .dark }
 ![dnSpy Anti Decompiler fix](/assets/images/billions-of-nops-well-for-anti-decompiler/nops-antidecompiler-fix-light.png){: .light }
 
-![dnSpy Anti Decompiler fix](/assets/images/billions-of-nops-well-for-anti-decompiler/nops-antidecompiler-methodbody-dark.png){: .dark }
-![dnSpy Anti Decompiler fix](/assets/images/billions-of-nops-well-for-anti-decompiler/nops-antidecompiler-methodbody-light.png){: .light }
+![dnSpy Anti Decompiler Method body fix](/assets/images/billions-of-nops-well-for-anti-decompiler/nops-antidecompiler-methodbody-dark.png){: .dark }
+![dnSpy Anti Decompiler Method body fix](/assets/images/billions-of-nops-well-for-anti-decompiler/nops-antidecompiler-methodbody-light.png){: .light }
