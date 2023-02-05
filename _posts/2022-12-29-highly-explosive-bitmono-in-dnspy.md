@@ -2,7 +2,7 @@
 layout: post
 title: Highly explosive BitMono in dnSpy
 date: '2022-12-29 17:06:59 +0200'
-categories: bitmono mono-magic dnspy bugs asmresolver
+categories: bitmono mono-magic dnspy bugs asmresolver anti-decompiler
 ---
 
 ### Edit 2/5/2023
