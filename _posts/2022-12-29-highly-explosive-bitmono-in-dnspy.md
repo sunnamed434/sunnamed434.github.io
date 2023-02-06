@@ -52,10 +52,10 @@ foreach (var type in module.GetAllTypes())
 ### Let's catch the first hare
 Write the module and drag-and-drop/specify the output file into dnSpy, search for the NestedType in Module type, then try to analyze it, and boom! Magic!
 
-![Select type and analyze](/assets/images/highly-explosive-bitmono-in-dnspy/analyze.dark.png){: .dark }
-![Select analyzation drop-down method](/assets/images/highly-explosive-bitmono-in-dnspy/crash.dark.png){: .dark }
+![Select type and analyze](/assets/images/highly-explosive-bitmono-in-dnspy/analyze.dark.png){: .dark width="700" height="400" }
+![Select analyzation drop-down method](/assets/images/highly-explosive-bitmono-in-dnspy/crash.dark.png){: .dark width="700" height="400" }
 
-![Select type and analyze](/assets/images/highly-explosive-bitmono-in-dnspy/analyze.light.png){: .light }
-![Select analyzation drop-down method](/assets/images/highly-explosive-bitmono-in-dnspy/crash.light.png){: .light }
+![Select type and analyze](/assets/images/highly-explosive-bitmono-in-dnspy/analyze.light.png){: .light width="700" height="400" }
+![Select analyzation drop-down method](/assets/images/highly-explosive-bitmono-in-dnspy/crash.light.png){: .light width="700" height="400" }
 
 Congrats! You've catched the hare :)
