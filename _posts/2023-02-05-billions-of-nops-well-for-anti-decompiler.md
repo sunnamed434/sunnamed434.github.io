@@ -56,5 +56,8 @@ You can do the same with the newest versions of dnSpy, you don’t need to insta
 ![dnSpy Anti Decompiler Switch csharp to IL](/assets/images/billions-of-nops-well-for-anti-decompiler/nops_antidecompiler_cs_switch_to_il_code_light.gif){: .light width="700" height="400" }
 ![dnSpy Anti Decompiler Switch csharp to IL](/assets/images/billions-of-nops-well-for-anti-decompiler/nops_antidecompiler_cs_switch_to_il_code_dark.gif){: .dark width="700" height="400" }
 
+## Conclusions
+I think such protection might good in some cases, but, this is still "antiskid" protection.
+
 ## Credits
 To [ElektroKill](https://github.com/ElektroKill) for supporting the [dnSpy(Ex)](https://github.com/dnSpyEx/dnSpy) and fixing the [BitMono](https://github.com/sunnamed434/BitMono) exploits. 
