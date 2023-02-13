@@ -21,7 +21,7 @@ timezone:
 
 title: sunnamed434                          # the main title
 
-tagline: .NET Software Engineer + Computer Engineer   # it will display as the sub-title
+tagline: blog, code and research # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Reverse Engineering, Obfuscation/Deobfuscation, .NET Architecture
