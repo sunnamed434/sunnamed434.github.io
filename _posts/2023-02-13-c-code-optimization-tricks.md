@@ -10,12 +10,12 @@ This is such a thing, quite complicated in places, and before we discuss it, we 
 
 The first thing is when we're doing optimization we know how things work, for example, details of implementation, and the specific things, also very often it's easy to do a mistake and add an optimization trick that you found here, doesn't check it out, and your optimization will get even worse than before, on the other hand, it's not hard to do right.
 
-You don't really need to be a .NET Senior to write optimized code for your project, knowing the basics is enough, but sometimes would be useful to be Senior to know the more tricks based on huge background experience.
+You don't really need to be a .NET Senior to write optimized code for your project, knowing the basics is enough, but sometimes would be useful to be a Senior to know the more tricks based on huge background experience.
 
 ## Setup
 ![BenchmarkDotNet Logo](/assets/images/c-code-optimization-tricks/benchmarkdotnet-logo.png)
 
-In case when you want to test the perfomance of something the best and popular way in .NET is to use [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet), also this post is based on this library, you will understand later, why. As an example why this library is so popular, even the [dotnet perfomance](https://github.com/dotnet/performance) uses this library for the benchmarking.
+In case when you want to test the perfomance of something I highly recommend you to use the best and most popular way in .NET is [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet), also this post is based on this library, you will understand later, why. As an example why this library is so popular, even the [dotnet perfomance](https://github.com/dotnet/performance) uses this library for the benchmarking.
 
 Very simple example of the benchmark:
 ```csharp
@@ -69,15 +69,17 @@ I want to notice that these tricks are tested on .NET 6.0 - which is actually ye
 
 I'll use such terminology for rating the tricks from easy-hard, than higher number than harder the tricks and requires knowledge of the how works compiler in depth or other complex things.
 
-So, you after reading the post you could, `Uhm.. like, you have the Hard trick, but this trick is so easy.`, for example the easy - means you doesn't need to know compiler peculiarities, etc. Than higher we are moving with the easy-hard, than more you need to know the context to understand the purpose of the trick, its when you used be to do something many times and you know how to do that better, kinda like best practice.
+So, you after reading the post you could say - `Uhm.. like, you have the Hard trick, but this trick is so easy.`, for example the easy - means you doesn't need to know compiler peculiarities, etc. Than higher we are moving with the easy-hard, than more you need to know the context to understand the purpose of the trick.
 
 * Easy (1 +)
 * Medium (2 ++)
 * Hard (3 +++)
 
-Let's start, you may know these tricks, but, just remind them.
+## How to find these tricks yourself
+When you used to do something many times and you know how to do that better, kinda like best practice, you probably might know how it works in depth and which way could be better to use in this context, this is how you can do that.
 
 ## Easy
+Let's start, you may know these tricks, but, just remind some of them.
 
 ### foreach IEnumerable vs List
 ```csharp
@@ -349,3 +351,7 @@ var obj = Unsafe.As<object, A>(ref @object);
 
 > 0.2757 ns
 {: .prompt-tip }
+
+## How the thing that you use is work
+* Use online source of [dotnet](https://source.dot.net/), you can specify there anything you wish to see.
+* Use decompilers to see the code such as [dnSpyEx](https://github.com/dnSpyEx/dnSpy) (DO NOT use old [dnSpy](https://github.com/dnSpy/dnSpy) because you will not be able to the async methods), [ILSpy](https://github.com/icsharpcode/ILSpy), and [dotPeek](https://www.jetbrains.com/decompiler/), highly recommend you to use dnSpy because it's much better. The problem is you will never see the actual "source code" using the decompiler, there's no source code anymore if you're using the decompiler for that because most of the things are optimized while the application is being compiled, so, most of the things can be different after decompiling it. 
