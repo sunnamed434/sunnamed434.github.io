@@ -60,4 +60,4 @@ You can do the same with the newest versions of dnSpy, you don’t need to insta
 I think such protection might good in some cases, but, this is still "antiskid" protection.
 
 ## Credits
-To [ElektroKill](https://github.com/ElektroKill) for supporting the [dnSpy(Ex)](https://github.com/dnSpyEx/dnSpy) and fixing the [BitMono](https://github.com/sunnamed434/BitMono) exploits. 
+To [ElektroKill](https://github.com/ElektroKill) for maintaining the [dnSpy(Ex)](https://github.com/dnSpyEx/dnSpy) and fixing the [BitMono](https://github.com/sunnamed434/BitMono) exploits.
