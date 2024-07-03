@@ -31,6 +31,8 @@ Instead of copying libraries from building application or searching them on NuGe
 
 To find the GAC, you need to install appropriate Mono version or just install Unity which your game have or whatever.
 
+For example where GAC can be stored: `Program Files\Mono\lib\mono\gac`
+
 ### Patch AppDomain.DoAssemblyResolve
 You can try to patch `AppDomain.DoAssemblyResolve` to load your stuff as first as possible, to resolve conflicts with other libraries and etc, but not always it will work.
 
