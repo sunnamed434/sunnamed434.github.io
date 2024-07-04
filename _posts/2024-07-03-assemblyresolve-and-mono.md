@@ -6,9 +6,22 @@ categories: mono unity assemblyresolve
 ---
 
 ## Why AssemblyResolve in Mono is so fun
-Idk why its so fun, but I spent so many time figuring it out, not many really know about this but who knows benefits from that a lot, let's start ;)
+Idk why its so fun, but I spent so many time figuring it out. Not many really know about how it work but who knows benefits from that a lot, let's start ;)
 
-Ok, let's say you have Web API which downloads your `List<Data>` it can be a plugins some tools whatever, but here's a case its very important to load it correctly, `Assembly.Load` and `AssemblyResolve` is not enough at all.
+## My attempts
+
+Attempts which not helped me:
+
+- Minimize/Remove the difference between versions in NuGet packages (that helped a bit)
+- Use auto-binding redirects such as in EF Core/MySQL projects
+- Use hands-made binding redirects
+- Load the identical assemblies (like filename1.dll; filename2.dll) but with required versions (this caused me exceptions that it could not find a proper method, like missing method exception, etc)
+- Install all mono GAC runtime libraries
+- Reading/watching tons of content and asking dozens of questions
+
+## Example
+
+Ok, let's say you have Web API and a client (maybe HttpClient/WebClient) which downloads your `List<Data>` it can be a plugins some tools whatever, but here's a case its very important to load it correctly, `Assembly.Load` and `AssemblyResolve` is not enough at all.
 
 ![DLL Hell Meme](/assets/images/assemblyresolve-and-mono/dll_hell.png)
 
@@ -22,7 +35,7 @@ Could not load signature of..
 Could not find type..
 ```
 
-It's all usual logs.
+It's all usual logs. However, sometimes you can see such logs but actually your Assembly can be loaded correctly, but maybe some of your references was resolved but a little later than other `AssemblyResolve` event listeners - which can also cause huge problems.
 
 ## Solutions
 
@@ -117,6 +130,14 @@ private static Assembly? TryLoadNotLoadedAssembly(ResolveEventArgs args)
 }
 ```
 
+## DO NOT load multiple assemblies
+Some of the Unity and Mono versions don't like when you load multiple assemblies which has identic name/version.
+
+As a result you might see errors like:
+- Could not load signature of
+- Could not find dependency
+- "Something about methods"
+
 ## DO NOT Reference ANYTHING at ALL
 Inside of your plugin (loader for example) do not reference any library, do not use any NuGet Packages, keep it super simple, it will save against most of the problems.
 
@@ -128,8 +149,27 @@ Inside of your plugin (loader for example) which loads the assemblies do not use
 
 If your game or whatever is already using netstandard then all fine.
 
+## v1.1.1 Not Means v1.1.1 of NuGet Package Version
+`Could not find dependency: System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+` you see this message in logs and think Oh yeah! I'll find this library, you go to the NuGet Packages and search the same version, nope, its wrong, remember:
+- Version of assembly doesn't means the version of NuGet Package, inside of the NuGet package there could be a different version of assembly.
+
+## Load as earlier as possible
+Try to load your libraries, specificially runtime libraries from GAC before any stuff loads, this actually can solve most of the problems.
+
+For example in game like `Unturned` you can make a `Module` which loads before any plugins and it first loads all libraries of this `Module` and then loading the actual `Module`.
+
+## Put Libraries In `\Managed`
+It will work only with Unity games.
+
+By default if Unity game can't find Library `On AssemblyResolve` it will try to find and load it from `Managed` directory.
+
+So, you can simply put your Library there.
+
 ## `Solutions` not helped
 This means something else loading incorrect libraries, or maybe have duplicated libraries, maybe somewhere you can find library as a File stored on a disk and loaded automatically by Mono or maybe by something else, which actually lead to this problem.
 
 ## Conclusion
 I saw many many many!!! super many people trying to figure it out and having similar problem, that's why I made this post. Even me asked about this many times but didn't get a help, maybe I understand why but anyway.
+
+Using the upper `Solutions` I made it possible to load `EF Core`, `Microsoft.Extensions.DependencyInjection` and 100+ more libraries in Mono, and including a moment that along side with me there are about 100+ other libraries and plugins.
