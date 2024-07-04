@@ -150,8 +150,7 @@ Inside of your plugin (loader for example) which loads the assemblies do not use
 If your game or whatever is already using netstandard then all fine.
 
 ## v1.1.1 Not Means v1.1.1 of NuGet Package Version
-`Could not find dependency: System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
-` you see this message in logs and think Oh yeah! I'll find this library, you go to the NuGet Packages and search the same version, nope, its wrong, remember:
+`Could not find dependency: System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35` you see this message in logs and think Oh yeah! I'll find this library, you go to the NuGet Packages and search the same version, nope, its wrong, remember:
 - Version of assembly doesn't means the version of NuGet Package, inside of the NuGet package there could be a different version of assembly.
 
 ## Load as earlier as possible
