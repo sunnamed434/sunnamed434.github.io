@@ -1,0 +1,45 @@
+version: 2
+updates:
+  # Ruby gems (for Jekyll)
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "@me"
+    assignees:
+      - "@me"
+    commit-message:
+      prefix: "bundler"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "ruby"
+    ignore:
+      # Ignore major version updates for critical Jekyll theme
+      - dependency-name: "jekyll-theme-chirpy"
+        update-types: ["version-update:semver-major"]
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "@me"
+    assignees:
+      - "@me"
+    commit-message:
+      prefix: "github-actions"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "github-actions"
