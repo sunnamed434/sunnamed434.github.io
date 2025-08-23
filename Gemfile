@@ -16,7 +16,7 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
 end
 
 # Jekyll <= 4.2.0 compatibility with Ruby 3.0
-gem "webrick", "~> 1.8"
+gem "webrick", "~> 1.9"
 
 
 gem 'jekyll-compose', group: [:jekyll_plugins]
