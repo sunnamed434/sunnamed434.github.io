@@ -12,7 +12,7 @@ updates:
     reviewers:
       - "@me"
     assignees:
-      - "@me"
+      - "sunnamed434"
     commit-message:
       prefix: "bundler"
       include: "scope"
@@ -36,7 +36,7 @@ updates:
     reviewers:
       - "@me"
     assignees:
-      - "@me"
+      - "sunnamed434"
     commit-message:
       prefix: "github-actions"
       include: "scope"
