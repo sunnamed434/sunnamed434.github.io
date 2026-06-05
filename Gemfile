@@ -2,21 +2,18 @@
 
 source "https://rubygems.org"
 
-gem "jekyll-theme-chirpy", "~> 5.3", ">= 5.3.2"
+gem "jekyll-theme-chirpy", "~> 7.5"
 
-group :test do
-  gem "html-proofer", "~> 5.2.1"
-end
+gem "html-proofer", "~> 5.2", group: :test
 
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
-install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
-  gem "tzinfo", "~> 2.0"
+platforms :windows, :jruby do
+  gem "tzinfo", ">= 1", "< 3"
   gem "tzinfo-data"
 end
 
-# Jekyll <= 4.2.0 compatibility with Ruby 3.0
+gem "wdm", "~> 0.2.0", platforms: [:windows]
+
+# Jekyll does not include this gem, so add it when running `jekyll serve` locally
 gem "webrick", "~> 1.9"
 
-
-gem 'jekyll-compose', group: [:jekyll_plugins]
+gem "jekyll-compose", group: [:jekyll_plugins]
