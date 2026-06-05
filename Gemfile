@@ -4,6 +4,11 @@ source "https://rubygems.org"
 
 gem "jekyll-theme-chirpy", "~> 7.5"
 
+# Ruby 3.4+ no longer bundles these stdlib gems by default; Jekyll still needs them
+gem "base64"
+gem "bigdecimal"
+gem "csv"
+
 # google-protobuf < 4.28 does not support Ruby 3.4 (pulled in via sass-embedded → Jekyll)
 gem "google-protobuf", ">= 4.28", "< 5.0"
 
