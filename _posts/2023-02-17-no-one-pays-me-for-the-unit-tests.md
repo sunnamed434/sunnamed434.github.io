@@ -1,6 +1,7 @@
 ---
 layout: post
 title: No one pays me for the Unit Tests
+description: Why unit tests are worth writing even when nobody pays you for them, and how they save time in the long run.
 date: '2023-02-17 10:39:38 +0200'
 categories: unittests interviews job
 ---

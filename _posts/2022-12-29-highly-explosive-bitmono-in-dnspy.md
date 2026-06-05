@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Highly explosive BitMono in dnSpy
+description: How BitMono-style type analysis crashes dnSpy during "Analyze" and the bug fix that landed in dnSpyEx 6.3.0.
 date: '2022-12-29 17:06:59 +0200'
 categories: bitmono mono-magic dnspy bugs asmresolver anti-decompiler
 ---

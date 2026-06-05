@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Billions of Nops - Well for Anti Decompiler?
+description: How anti-decompiler NOP floods crash dnSpy and quick ways to defeat them without writing a full deobfuscator.
 date: '2023-02-05 12:17:12 +0200'
 categories: dnspy bugs asmresolver anti-decompiler
 ---

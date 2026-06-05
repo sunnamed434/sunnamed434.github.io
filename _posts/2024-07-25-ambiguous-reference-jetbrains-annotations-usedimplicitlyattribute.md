@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ambiguous reference JetBrains.Annotations.UsedImplicitlyAttribute
+description: How to fix ambiguous UsedImplicitlyAttribute references when Unity and JetBrains.Annotations conflict.
 date: 2024-07-25 15:59 +0300
 categories: jetbrains annotations unity csharp dotnet ide
 ---

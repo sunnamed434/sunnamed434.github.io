@@ -1,6 +1,7 @@
 ---
 layout: post
 title: C# Code Optimization Tricks
+description: Practical C# performance tricks measured with BenchmarkDotNet, plus common optimization mistakes to avoid.
 date: '2023-02-13 12:50:24 +0200'
 categories: csharp optimization tricks
 ---

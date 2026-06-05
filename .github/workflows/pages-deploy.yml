@@ -50,6 +50,29 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
+      - name: Fix sitemap XML for crawlers
+        run: |
+          SITE_DIR="_site${{ steps.pages.outputs.base_path }}"
+          if [ -f "$SITE_DIR/sitemap.xml" ]; then
+            sed -i 's/ xmlns:xsi="[^"]*" xsi:schemaLocation="[^"]*"//g' "$SITE_DIR/sitemap.xml"
+          fi
+
+      - name: Validate SEO discovery files
+        run: |
+          SITE_DIR="_site${{ steps.pages.outputs.base_path }}"
+          test -f "$SITE_DIR/sitemap.xml"
+          test -f "$SITE_DIR/feed.xml"
+          test -f "$SITE_DIR/robots.txt"
+          test -f "$SITE_DIR/llms.txt"
+          grep -q '<urlset' "$SITE_DIR/sitemap.xml"
+          grep -q '<feed' "$SITE_DIR/feed.xml"
+          grep -q 'Sitemap:' "$SITE_DIR/robots.txt"
+          ENTRY_COUNT=$(grep -c '<entry>' "$SITE_DIR/feed.xml" || true)
+          if [ "$ENTRY_COUNT" -lt 8 ]; then
+            echo "Expected at least 8 feed entries, found $ENTRY_COUNT"
+            exit 1
+          fi
+
       - name: Test site
         run: |
           bundle exec htmlproofer _site${{ steps.pages.outputs.base_path }} \

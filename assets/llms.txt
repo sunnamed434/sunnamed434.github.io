@@ -1,0 +1,34 @@
+---
+permalink: /llms.txt
+---
+
+# sunnamed434
+
+> Blog about reverse engineering, .NET architecture, obfuscation/deobfuscation, and Mono/Unity internals.
+
+## Posts
+
+- [Ambiguous reference JetBrains.Annotations.UsedImplicitlyAttribute](https://sunnamed434.github.io/posts/ambiguous-reference-jetbrains-annotations-usedimplicitlyattribute/): Fixing ambiguous UsedImplicitlyAttribute references in Unity and JetBrains.Annotations.
+- [AssemblyResolve And Mono](https://sunnamed434.github.io/posts/assemblyresolve-and-mono/): How Mono AssemblyResolve works and practical solutions for loading assemblies in Unity/Mono.
+- [Fix Harmony.UnpatchAll](https://sunnamed434.github.io/posts/fix-harmony-unpatchall/): Why Harmony.UnpatchAll removes patches from other assemblies and how to fix it.
+- [No one pays me for the Unit Tests](https://sunnamed434.github.io/posts/no-one-pays-me-for-the-unit-tests/): Why unit tests matter for developers despite the common excuses against writing them.
+- [C# Code Optimization Tricks](https://sunnamed434.github.io/posts/c-code-optimization-tricks/): Practical C# performance tricks with BenchmarkDotNet measurements and pitfalls to avoid.
+- [Understanding the Importance of File Paths in Portable Executables (PE)](https://sunnamed434.github.io/posts/understanding-the-importance-of-file-paths-in-portable-executables-pe/): How PE files store paths in metadata and why it matters for debugging and security.
+- [Billions of Nops - Well for Anti Decompiler?](https://sunnamed434.github.io/posts/billions-of-nops-well-for-anti-decompiler/): Analyzing anti-decompiler NOP floods in dnSpy and how to defeat them without writing a deobfuscator.
+- [Highly explosive BitMono in dnSpy](https://sunnamed434.github.io/posts/highly-explosive-bitmono-in-dnspy/): A dnSpy analyzer crash triggered by BitMono-style type analysis and how it was fixed.
+
+## Pages
+
+- [Home](https://sunnamed434.github.io/)
+- [About](https://sunnamed434.github.io/about/)
+- [Archives](https://sunnamed434.github.io/archives/)
+- [Categories](https://sunnamed434.github.io/categories/)
+- [Tags](https://sunnamed434.github.io/tags/)
+
+## Feeds
+
+- [Atom feed](https://sunnamed434.github.io/feed.xml)
+
+## License
+
+Posts are licensed under CC BY 4.0 unless stated otherwise.

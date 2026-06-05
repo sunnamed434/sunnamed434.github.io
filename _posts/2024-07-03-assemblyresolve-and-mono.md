@@ -1,6 +1,7 @@
 ---
 layout: post
 title: AssemblyResolve And Mono
+description: How Mono AssemblyResolve differs from .NET Framework and practical solutions for loading EF Core and 100+ libraries in Unity/Mono.
 date: 2024-07-03 15:08 +0300
 categories: mono unity assemblyresolve
 ---

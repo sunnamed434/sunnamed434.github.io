@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Understanding the Importance of File Paths in Portable Executables (PE)
+description: How PE files embed file paths in metadata, why it matters for loading and debugging, and how to inspect them with dnSpy or a hex editor.
 date: '2023-02-05 13:22:51 +0200'
 categories: pe hex dnspy security
 ---

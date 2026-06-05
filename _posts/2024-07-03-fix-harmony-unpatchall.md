@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fix Harmony.UnpatchAll
+description: Why Harmony.UnpatchAll removes patches from other assemblies and how to unpatch only your own Harmony patches safely.
 date: 2024-07-03 14:25 +0300
 categories: csharp dotnet harmonylib harmony
 ---
