@@ -9,9 +9,16 @@
 !.versionrc.json
 !.stylelintrc.json
 
+# Jekyll build output and local test builds
+_site/
+_site*/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
 # bundler cache
-_site
-vendor
+.bundle/
+vendor/
 
 # rubygem
 *.gem
