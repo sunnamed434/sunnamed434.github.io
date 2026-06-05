@@ -4,6 +4,9 @@ source "https://rubygems.org"
 
 gem "jekyll-theme-chirpy", "~> 7.5"
 
+# google-protobuf < 4.28 does not support Ruby 3.4 (pulled in via sass-embedded → Jekyll)
+gem "google-protobuf", ">= 4.28", "< 5.0"
+
 gem "html-proofer", "~> 5.2", group: :test
 
 platforms :windows, :jruby do
