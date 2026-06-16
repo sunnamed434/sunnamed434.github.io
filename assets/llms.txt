@@ -8,6 +8,7 @@ permalink: /llms.txt
 
 ## Posts
 
+- [No, Local AI Won't Replace Your Claude Subscription](https://sunnamed434.github.io/posts/no-local-ai-wont-replace-your-claude-subscription/): Running local LLMs on a Strix Halo mini PC next to a paid Claude Max subscription, and why running both beats going fully local.
 - [Ambiguous reference JetBrains.Annotations.UsedImplicitlyAttribute](https://sunnamed434.github.io/posts/ambiguous-reference-jetbrains-annotations-usedimplicitlyattribute/): Fixing ambiguous UsedImplicitlyAttribute references in Unity and JetBrains.Annotations.
 - [AssemblyResolve And Mono](https://sunnamed434.github.io/posts/assemblyresolve-and-mono/): How Mono AssemblyResolve works and practical solutions for loading assemblies in Unity/Mono.
 - [Fix Harmony.UnpatchAll](https://sunnamed434.github.io/posts/fix-harmony-unpatchall/): Why Harmony.UnpatchAll removes patches from other assemblies and how to fix it.
