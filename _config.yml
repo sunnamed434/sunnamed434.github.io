@@ -48,7 +48,7 @@ social:
 # Create a URL-prefix property at https://search.google.com/search-console
 # then paste the content value from the verification meta tag below.
 webmaster_verifications:
-  google:               # e.g. abc123... (content attribute only, not the full meta tag)
+  google: i8_fKR_7sqCO5YHnoIz0CeBIn-WUr-4TkwEBezDrpv8
   # bing:
   # alexa:
   # yandex:
@@ -205,6 +205,9 @@ compress_html:
   blanklines: false
   ignore:
     envs: [development]
+
+include:
+  - googlec2eb5e76ec38e350.html
 
 exclude:
   - '*.gem'
