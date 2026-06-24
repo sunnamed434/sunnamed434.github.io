@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "jekyll-theme-chirpy", "~> 7.5"
+gem "jekyll-theme-chirpy", "~> 7.6"
 
 # Ruby 3.4+ no longer bundles these stdlib gems by default; Jekyll still needs them
 gem "base64"
